@@ -79,7 +79,8 @@ start | "")
 	init_gpio "$(nvram get 2860 ir_pin)" "out"
 	ir_cut "on"
 
-	#autonight -D /dev/jz_adc_aux_0 -d 1 -O 600 -F 650 &
+	#autonight -S &
+	night_mode on
 
 	# Set Yellow led
 	yellow_led_state="$(nvram get 2860 yellow_led_state)"
